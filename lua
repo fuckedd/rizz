@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Window = Rayfield:CreateWindow({
-    Name = "[Get Those Bitches]",
+    Name = "Rarest Tool In The Shed",
     LoadingTitle = "Rizzler [Rarest Tool In The Shed]",
     LoadingSubtitle = "By Anonymous",
     ConfigurationSaving = {
@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
     
 })
 
-local RizzlerWindow = Window:CreateTab("Rizzler", 7817777216)
+local RizzlerWindow = Window:CreateTab("Credits: Anonymous")
 
 local test = {
    "Are you a dad? Because i want your milk 😩",

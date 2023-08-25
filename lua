@@ -206,24 +206,27 @@ local Chat = RizzlerWindow:CreateButton({
 })
 
 local usedIndices = {}
+local maxUsedIndices = 154 -- Maximum number of lines before resetting
 
 local Chat2 = RizzlerWindow:CreateButton({
-   Name = "Say Random line",
-   Info = "Says a random line", 
-   Interact = '??',
-   Callback = function()
+    Name = "Say Random line",
+    Info = "Says a random line", 
+    Interact = '??',
+    Callback = function()
         local newIndex
+        
+        if #usedIndices >= maxUsedIndices then
+            usedIndices = {} -- Reset the usedIndices array when maxUsedIndices is reached
+        end
+        
         repeat
             newIndex = math.random(1, #test)
         until not usedIndices[newIndex]
         
         table.insert(usedIndices, newIndex)
-        if #usedIndices > 1 then -- Adjust the number as needed
-            table.remove(usedIndices, 1)
-        end
-
+        
         ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(test[newIndex], "All")
-   end,
+    end,
 })
 
 Rayfield:LoadConfiguration()

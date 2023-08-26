@@ -23,6 +23,7 @@ local RizzlerWindow = Window:CreateTab("Credits: Anonymous")
 local test = {
    "Are you a dad? Because i want your milk 😩",
    "Are you a bus? Because i wanna fill you up with children 😩",
+   "Are you a schizophrenic? Because if i were you i wouldn't think i was real 😩",
    "Are you a rollercoaster because the faster you go the more i scream/cream 😩",
    "All the pickup lines are taken but i could take you out tonight 😉",
    "I wish I was crossed-eyed so I could see you twice.",
